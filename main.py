@@ -2,9 +2,8 @@ import sqlite3
 from aiogram import Bot, Dispatcher, executor, types
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 import logging
-
-API_TOKEN = '7211206928:AAF2EA_PLC5zUlPwvxWh4WGiX_uWTU2RBcs'  # Replace with your BotFather token
-
+import os
+API_TOKEN = os.getenv("API_TOKEN")
 # Initialize bot and dispatcher
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
